@@ -1,3 +1,6 @@
+# Contextual Bandit Experiment
+Section 6.2 of the paper
+
 We compare with [Majzoubi et. al.](https://arxiv.org/abs/2006.06040) on their [collection of OpenML regression problems](https://github.com/VowpalWabbit/vowpal_wabbit/tree/master/papers/cats/code_submission).
 
 1. The data can be obtained from here:
