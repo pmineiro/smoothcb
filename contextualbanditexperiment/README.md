@@ -15,3 +15,10 @@ foo@bar:~$ wget https://www.openml.org/data/get_csv/150677/BNG_wisconsin.arff -O
 foo@bar:~$ sed '/^$/d' -i BNG_wisconsin.csv
 foo@bar:~$ python ./preprocess_data.py --csv_file BNG_wisconsin.csv 
 ```
+1. [This interactive notebook](fastcbcorral.ipynb) demonstrates the technique, and also contains the results in the table in the paper.
+    1. As per Majzoubi et. al., confidence intervals are computed from a single online run, with hyperparameters chosen to be optimal in hindsight.
+    1. [Hyperparameter optimization](tune-fastcbcorral.py) is by random search, e.g., 
+```console
+foo@bar:~$ python ./tune-fastcbcorral.py black_friday.dat > tune-fastcbcorral.black_friday.res
+```
+and then process the output to determine the best hyperparameter settings.
